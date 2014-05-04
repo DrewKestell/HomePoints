@@ -1,0 +1,9 @@
+HomePoints is a console application written in Python used to filter GPS data.  Specifically, you can define any number of circles, and any GPS data that falls outside of those circles will be deleted.  Currently .csv is the only supported file type.  GPS data must be in decimal degrees (ex: 38.889722, -77.008889).  Converting from degrees, minute, seconds (DMS) to decimal degrees (DD) is easy, just do a quick Google Search to find plenty of free conversion services.  
+
+HomePoints requires two input files.  One will contain your raw GPS data which must be in a two-column .csv file with the headers Latitude and Longitude in the first two cells followed by coordinate pairs in those two columns.  The second input file will define your circles in a 3 column .csv file with the headers Latitude, Longitude and Radius.  The center of your circle will be defined as a latitude/longitude coordinate pair in the first two columns, and the radius of your circle will be defined in the 3rd column as a number of miles.
+
+When you run HomePoints.exe, you'll be prompted to enter the file names of your two input files.  These two .csv files must be in the same folder as HomePoints.exe.  The script will create a new .csv file as output that will contain only the GPS data that falls within your specified circles.  The entire set of data will be checked against the first circle, and only data that falls within that circle will be copied into the output .csv file.  The script will continue to check the entire set of raw data against each circle specified in the second input file.
+
+Feel free to contact me with any questions, or with requests for additional functionality.
+
+drew.kestell@gmail.com
